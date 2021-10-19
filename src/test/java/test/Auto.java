@@ -21,9 +21,17 @@ public class Auto {
 	
 	
 	String verificarIntegridad() {
+		int[] n= new int[asientos.length];
+		int m = 0;
+		for (int i = 0;i<asientos.length;i++) {
+			if(asientos[i]!=null) {
+				n[m]=asientos[i].registro;
+				m++;
+			}
+		}
 		Boolean a=true;
-		for (int i = 0 ; i < asientos.length-1 ; i++ ) {
-			if (!(asientos[i].registro==asientos[i+1].registro)) {
+		for (int i = 0 ; i < n.length-1 ; i++ ) {
+			if (!(n[i]==n[i+1])) {
 				a=false;
 				break;
 			}
