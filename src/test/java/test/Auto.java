@@ -12,12 +12,13 @@ public class Auto {
 	int cantidadAsientos() {
 		int n=0;
 		for (int i = 0;i<asientos.length;i++) {
-			if(asientos[i].color!=null) {
+			if(asientos[i]!=null) {
 				n++;
 			}
 		}
 		return n;
 	}
+	
 	
 	String verificarIntegridad() {
 		Boolean a=true;
